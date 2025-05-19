@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o Amor da Minha Vida 💜</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="girlfriend-name">Amor da Minha Vida</h1>
+            <p class="subtitle">Cada dia ao seu lado é um presente que eu guardo no coração 💌</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="gallery">
+            <img src="https://via.placeholder.com/200x200?text=Nossa+Foto+1" alt="Nossa foto 1">
+            <img src="https://via.placeholder.com/200x200?text=Nossa+Foto+2" alt="Nossa foto 2">
+            <img src="https://via.placeholder.com/200x200?text=Nossa+Foto+3" alt="Nossa foto 3">
+            <img src="https://via.placeholder.com/200x200?text=Nossa+Foto+4" alt="Nossa foto 4">
+            <img src="https://via.placeholder.com/200x200?text=Nossa+Foto+5" alt="Nossa foto 5">
+        </div>
+        
+        <div class="love-letter">
+            <p>Meu amor,</p>
+            <p>Não existem palavras suficientes para expressar o que sinto por você.</p>
+            <p>Cada momento ao seu lado é especial, cada riso, cada olhar, cada abraço.</p>
+            <p>Você é a pessoa que ilumina meus dias e aquece meu coração.</p>
+            <p>Eu te amo mais do que todas as estrelas no céu.</p>
+            <p>Para sempre seu.</p>
+        </div>
+        
+        <div class="interactive">
+            <div class="question">
+                <h3>Você me ama? 💜</h3>
+                <input type="text" id="love-question" placeholder="Digite sua resposta...">
+                <button onclick="checkLoveAnswer()">Responder</button>
+                <div class="response" id="love-response">
+                    Eu sabia! Você é a pessoa mais incrível do mundo! <span class="heart">❤️</span>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3>Qual a nossa data especial? 📅</h3>
+                <input type="text" id="date-question" placeholder="Digite no formato DD/MM/AAAA">
+                <button onclick="checkDateAnswer()">Responder</button>
+                <div class="response" id="date-response">
+                    Esse dia mudou minha vida para sempre! <span class="heart">❤️</span>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3>Qual meu apelido carinhoso para você? ✏️</h3>
+                <input type="text" id="nickname-question" placeholder="Digite seu palpite">
+                <button onclick="checkNicknameAnswer()">Responder</button>
+                <div class="response" id="nickname-response">
+                    Exatamente! Porque você é única e especial! <span class="heart">❤️</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p class="footer-message">Se você chegou até aqui, saiba que meu amor por você é infinito</p>
+            <button class="surprise-btn" onclick="revealSurprise()">Clique aqui se você me ama 🥰</button>
+            <div class="surprise" id="surprise">
+                <p>EU TE AMO MAIS QUE TUDO!</p>
+                <p>Você é o amor da minha vida e eu sou o homem mais feliz do mundo por ter você.</p>
+                <p>Obrigado por existir! <span class="heart">❤️</span></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
