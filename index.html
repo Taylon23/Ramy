@@ -1,79 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Para o Amor da Minha Vida 💜</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <div id="smile-button">😊 hihi!</div>
+  <body>
     <header>
-        <div class="container">
-            <h1 id="girlfriend-name">Amor da Minha Vida</h1>
-            <p class="subtitle">Cada dia ao seu lado é um presente que eu guardo no coração 💌</p>
-        </div>
+      <div class="container">
+        <h1 id="girlfriend-name">Para minha doce Ramy🧁</h1>
+        <p class="subtitle">
+          Cada segundo ao seu lado é como um passo mais perto do amor que eu
+          sempre sonhei 💞
+        </p>
+      </div>
     </header>
-    
+
     <div class="container">
+      <div class="introduction">
+        <h2>Leia antes de continuar, boboca.</h2>
+        <p>
+          Eu não sou bom com palavras kkkkkkkkkk, mas fiz algo muito legal pra
+          você e espero que goste.
+        </p>
+        <p>
+          Aaaa, e demorou um pouquinho ksksksks. Comecei isso em maio, mas fui
+          juntando cada detalhezinho seu, então não fiz isso tudo aqui de uma
+          vez só ksksksks.
+        </p>
+        <p>
+          Vou tentar escrever os textos de um jeito que não fique tão robótico
+          ou clichê, tipo aqueles mimimi de sempre kksksks.
+        </p>
+        <p>
+          Então presta atenção em cada detalhe e vai respondendo as perguntinhas
+          pra ver umas coisinhas escondidas hehe.
+        </p>
+        <p>
+          Aaaa, já ia esquecendo! Bem do seu ladinho tem um botão de sorriso —
+          quero que clique nele toda vez que sorrir (pode mover ele) com algo
+          aqui ou quando achar algo tipo "wow" ksksksk 💖.
+        </p>
+        <p>Bom, já falei demais... pode começar! ✨</p>
+      </div>
+
+      <div class="interactive"></div>
+
+      <!-- Caixa de alerta personalizada -->
+      <div class="custom-alert" id="customAlert">
+        <div class="alert-content">
+          <p id="alertMessage">Mensagem</p>
+          <button onclick="fecharAlerta()">💖 Ok</button>
+        </div>
+      </div>
+
+      <div class="love-letter"></div>
+
+      <div class="introduction">
+        <h2>Lá embaixo ficam umas coisinhas massa, mas leia isso aqui antes</h2>
+        <p>
+          Agora vou explicar o motivo de querer tirar foto com você toda vez que
+          nos encontramos ksksks. É claro que eu quero registrar cada momento
+          com você, mas um dos motivos era pra selecionar cada foto nossa e
+          colocar aqui ksksks. Além de criar a edição, acho que já disse pra
+          você que eu ia fazer isso... Bem doido, né?
+        </p>
+        <p>
+          Você tá lendo algo que eu comecei em maio, e provavelmente nos outros
+          dias futuros eu ainda vou escrever mais aqui ksksk. Eu não sei se
+          mudei algum pensamento ou algo aqui, mas tenho certeza que melhorei
+          cada coisinha e, com certeza, me apaixonei ainda mais por você.
+        </p>
+        <p>
+          E sim, escrevi mais coisas "gay" akakaka. Aff (ksksksks), pode
+          continua 💖
+        </p>
+      </div>
+
+      <!-- Botão para revelar a galeria -->
+      <div class="reveal-gallery-button-container">
+        <button class="reveal-gallery-button" onclick="mostrarGaleria()">
+          📸 Clica aqui pra ver algo nosso 💕
+        </button>
+      </div>
+
+      <div class="content-gallery hidden" id="galeriaFotos">
         <div class="gallery">
-            <img src="https://via.placeholder.com/200x200?text=Nossa+Foto+1" alt="Nossa foto 1">
-            <img src="https://via.placeholder.com/200x200?text=Nossa+Foto+2" alt="Nossa foto 2">
-            <img src="https://via.placeholder.com/200x200?text=Nossa+Foto+3" alt="Nossa foto 3">
-            <img src="https://via.placeholder.com/200x200?text=Nossa+Foto+4" alt="Nossa foto 4">
-            <img src="https://via.placeholder.com/200x200?text=Nossa+Foto+5" alt="Nossa foto 5">
+          <img
+            src="assets/Captura de tela 2025-05-05 121303.png"
+            alt="Nossa foto 1"
+          />
+          <img
+            src="https://via.placeholder.com/200x200?text=Nossa+Foto+2"
+            alt="Nossa foto 2"
+          />
+          <img
+            src="https://via.placeholder.com/200x200?text=Nossa+Foto+3"
+            alt="Nossa foto 3"
+          />
+          <img
+            src="https://via.placeholder.com/200x200?text=Nossa+Foto+4"
+            alt="Nossa foto 4"
+          />
+          <img
+            src="https://via.placeholder.com/200x200?text=Nossa+Foto+5"
+            alt="Nossa foto 5"
+          />
         </div>
-        
-        <div class="love-letter">
-            <p>Meu amor,</p>
-            <p>Não existem palavras suficientes para expressar o que sinto por você.</p>
-            <p>Cada momento ao seu lado é especial, cada riso, cada olhar, cada abraço.</p>
-            <p>Você é a pessoa que ilumina meus dias e aquece meu coração.</p>
-            <p>Eu te amo mais do que todas as estrelas no céu.</p>
-            <p>Para sempre seu.</p>
-        </div>
-        
-        <div class="interactive">
-            <div class="question">
-                <h3>Você me ama? 💜</h3>
-                <input type="text" id="love-question" placeholder="Digite sua resposta...">
-                <button onclick="checkLoveAnswer()">Responder</button>
-                <div class="response" id="love-response">
-                    Eu sabia! Você é a pessoa mais incrível do mundo! <span class="heart">❤️</span>
-                </div>
-            </div>
-            
-            <div class="question">
-                <h3>Qual a nossa data especial? 📅</h3>
-                <input type="text" id="date-question" placeholder="Digite no formato DD/MM/AAAA">
-                <button onclick="checkDateAnswer()">Responder</button>
-                <div class="response" id="date-response">
-                    Esse dia mudou minha vida para sempre! <span class="heart">❤️</span>
-                </div>
-            </div>
-            
-            <div class="question">
-                <h3>Qual meu apelido carinhoso para você? ✏️</h3>
-                <input type="text" id="nickname-question" placeholder="Digite seu palpite">
-                <button onclick="checkNicknameAnswer()">Responder</button>
-                <div class="response" id="nickname-response">
-                    Exatamente! Porque você é única e especial! <span class="heart">❤️</span>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    
-    <footer>
-        <div class="container">
-            <p class="footer-message">Se você chegou até aqui, saiba que meu amor por você é infinito</p>
-            <button class="surprise-btn" onclick="revealSurprise()">Clique aqui se você me ama 🥰</button>
-            <div class="surprise" id="surprise">
-                <p>EU TE AMO MAIS QUE TUDO!</p>
-                <p>Você é o amor da minha vida e eu sou o homem mais feliz do mundo por ter você.</p>
-                <p>Obrigado por existir! <span class="heart">❤️</span></p>
-            </div>
+
+    <div class="content-title-slide hidden" id="slide">
+      <h1 style="text-align: center">Mais foto nossa hehe</h1>
+
+      <div class="slider-container">
+        <div class="slider" id="slider">
+          <div class="slide">
+            <img
+              src="assets/Captura de tela 2025-05-05 121303.png"
+              alt="Foto 1"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://via.placeholder.com/300x200?text=Foto+2"
+              alt="Foto 2"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://via.placeholder.com/300x200?text=Foto+3"
+              alt="Foto 3"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://via.placeholder.com/300x200?text=Foto+4"
+              alt="Foto 4"
+            />
+          </div>
         </div>
+        <button class="prev" onclick="mudarSlide(-1)">❮</button>
+        <button class="next" onclick="mudarSlide(1)">❯</button>
+      </div>
+    </div>
+
+    <!-- <div class="button-dwonload">
+      <a href="caminho/do/arquivo.pdf" download class="download-btn"
+        >📥 Baixar presente</a
+      >
+    </div> -->
+
+    <footer>
+      <div class="container">
+        <p class="footer-message">
+          Se você chegou até aqui, saiba que você é alguém que quero levar para o resto da minha vida
+        </p>
+        <button class="surprise-btn" onclick="mostraDown()">
+         Não clique aqui
+        </button>
+      </div>
     </footer>
-    
+
     <script src="script.js"></script>
-</body>
+    <script src="carrosel.js"></script>
+    <script src="button-count.js"></script>
+    <script src="gallery.js"></script>
+    <script src="slide.js"></script>
+    <script src="download.js"></script>
+
+  </body>
 </html>

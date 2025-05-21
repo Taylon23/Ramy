@@ -1,62 +1,98 @@
-// Você pode personalizar as respostas corretas aqui
-const correctAnswers = {
-  love: ["sim", "claro", "amo", "com certeza", "obvio"],
-  date: ["01/01/2000"], // Substitua pela sua data especial
-  nickname: ["amor", "vida", "fofa", "princesa"], // Substitua pelos seus apelidos
-};
+const perguntas = [
+  {
+    texto: "Qual é a sua estação do ano favorita?",
+    alerta: "Estação linda, como você 💮",
+    carta: {
+      titulo: "Carta 1 – Um começo doce",
+      texto: "Quando penso em você, tudo floresce dentro de mim 🌸.",
+    },
+  },
+  {
+    texto: "Você acredita em amor à primeira vista?",
+    alerta: "Acreditar no amor é mágico ✨",
+    carta: {
+      titulo: "Carta 2 – Confissões do coração",
+      texto:
+        "Você faz meu coração sorrir de um jeito que eu nem sabia que era possível 💖.",
+    },
+  },
+  {
+    texto: "Se pudesse ir a qualquer lugar agora, onde seria?",
+    alerta: "Que lugar especial! 🗺️",
+    carta: {
+      titulo: "Carta 3 – Uma viagem com você",
+      texto: "Não importa o destino... se for contigo, já é o paraíso 💞.",
+    },
+  },
+  {
+    texto: "Qual é sua música romântica preferida?",
+    alerta: "Essa música toca a alma 🎶",
+    carta: {
+      titulo: "Carta 4 – Trilha sonora do amor",
+      texto: "Cada verso de uma canção me lembra o som da sua risada 🎵❤️.",
+    },
+  },
+  {
+    texto: "Você gosta de surpresas?",
+    alerta: "As melhores surpresas vêm do coração 🎁",
+    carta: {
+      titulo: "Carta 5 – Uma surpresa no fim",
+      texto:
+        "Essa jornada foi só o começo… tem muito amor guardado pra você 💌.",
+    },
+  },
+];
 
-function checkLoveAnswer() {
-  const answer = document.getElementById("love-question").value.toLowerCase();
-  const response = document.getElementById("love-response");
+const container = document.querySelector(".interactive");
+const cartaContainer = document.querySelector(".love-letter");
+const customAlert = document.getElementById("customAlert");
+const alertMessage = document.getElementById("alertMessage");
+let indice = 0;
 
-  if (correctAnswers.love.some((correct) => answer.includes(correct))) {
-    response.classList.add("show");
-  } else {
-    alert("Tente novamente com o coração! 💜");
+function mostrarPergunta() {
+  if (indice >= perguntas.length) {
+    container.innerHTML =
+      "<p style='font-family: Comic Sans MS; font-size: 1.2em;'>Você terminou o questionário! 💞</p>";
+    return;
   }
+
+  container.innerHTML = `
+      <label style="font-family: Comic Sans MS; font-size: 1.1em;">${perguntas[indice].texto}</label><br>
+      <input type="text" id="resposta" placeholder="Digite sua resposta" />
+      <button onclick="responder()">Responder</button>
+    `;
 }
 
-function checkDateAnswer() {
-  const answer = document.getElementById("date-question").value;
-  const response = document.getElementById("date-response");
-
-  if (correctAnswers.date.includes(answer)) {
-    response.classList.add("show");
-  } else {
-    alert("Essa não é a nossa data especial! Tente novamente.");
+function responder() {
+  const resposta = document.getElementById("resposta").value;
+  if (resposta.trim() === "") {
+    mostrarAlerta("Responda com carinho antes de continuar 💌");
+    return;
   }
+
+  mostrarCarta(perguntas[indice].carta);
+  mostrarAlerta(perguntas[indice].alerta);
 }
 
-function checkNicknameAnswer() {
-  const answer = document
-    .getElementById("nickname-question")
-    .value.toLowerCase();
-  const response = document.getElementById("nickname-response");
-
-  if (correctAnswers.nickname.some((correct) => answer.includes(correct))) {
-    response.classList.add("show");
-  } else {
-    alert("Não é esse... Pense com carinho!");
-  }
+function mostrarCarta(carta) {
+  const div = document.createElement("div");
+  div.className = "card";
+  div.innerHTML = `
+      <h3>${carta.titulo}</h3>
+      <p>${carta.texto}</p>
+    `;
+  cartaContainer.appendChild(div);
 }
 
-function revealSurprise() {
-  const surprise = document.getElementById("surprise");
-  surprise.classList.add("show");
-
-  // Rola a página para mostrar a surpresa
-  surprise.scrollIntoView({ behavior: "smooth" });
-
-  // Altera o texto do botão
-  const btn = document.querySelector(".surprise-btn");
-  btn.textContent = "Você é o amor da minha vida! 💜";
-  btn.style.backgroundColor = "#ff4081";
+function mostrarAlerta(mensagem) {
+  alertMessage.innerText = mensagem;
+  customAlert.style.display = "flex";
 }
 
-// Personalize o nome da sua namorada aqui
-document.addEventListener("DOMContentLoaded", function () {
-  const name = prompt("Qual o nome da sua namorada?");
-  if (name) {
-    document.getElementById("girlfriend-name").textContent = name;
-  }
-});
+function fecharAlerta() {
+  customAlert.style.display = "none";
+  indice++;
+  mostrarPergunta();
+}
+// Primeira pergunta ao carregar
+mostrarPergunta();

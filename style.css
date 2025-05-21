@@ -9,6 +9,47 @@ body {
   overflow-x: hidden;
 }
 
+#smile-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f8bbd0;
+  color: #6a1b9a;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  z-index: 9999;
+  font-weight: bold;
+  user-select: none; /* evita seleção do texto enquanto arrasta */
+  transition: transform 0.2s ease;
+}
+
+#smile-button:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+#smile-button.animate {
+  animation: pulse 0.6s ease forwards;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background-color: #ffcc80;
+  }
+  50% {
+    transform: scale(1.3);
+    background-color: #ffd54f;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #ffcc80;
+  }
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -39,21 +80,32 @@ h1 {
   font-weight: 300;
 }
 
-.gallery {
+.content-gallery {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 15px;
-  margin: 40px 0;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 10px pink;
 }
 
 .gallery img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.gallery img.active {
+  opacity: 1;
 }
 
 .gallery img:hover {
@@ -62,19 +114,35 @@ h1 {
 }
 
 .love-letter {
-  text-align: center;
-  padding: 30px;
-  margin: 40px 0;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(106, 27, 154, 0.1);
-  font-family: "Dancing Script", cursive;
-  font-size: 1.8rem;
-  line-height: 1.8;
-  animation: slideUp 1s ease-in-out;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.interactive {
+.card {
+  background: #fff0f6;
+  border: 2px solid #f8bbd0;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease;
+  font-family: "Comic Sans MS", cursive;
+}
+
+.card h3 {
+  color: #d81b60;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #6a1b9a;
+  font-size: 1em;
+}
+
+.interactive,
+.introduction {
   background-color: white;
   padding: 30px;
   border-radius: 15px;
@@ -171,6 +239,8 @@ footer {
 
 .surprise-btn:hover {
   transform: scale(1.05);
+  background-color: #6a1b9a;
+  color: #f9f0ff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -194,6 +264,61 @@ footer {
   font-size: 2rem;
   display: inline-block;
   animation: pulse 1.5s infinite;
+}
+
+.custom-alert {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert-content {
+  background: #ffe0f0;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: popUp 0.3s ease;
+}
+
+.alert-content p {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 1.2em;
+  color: #a3005f;
+  margin-bottom: 15px;
+}
+
+.alert-content button {
+  background-color: #ff80ab;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.alert-content button:hover {
+  background-color: #f06292;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
@@ -228,6 +353,110 @@ footer {
   }
 }
 
+/* Botão fofinho */
+.reveal-gallery-button-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.reveal-gallery-button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.reveal-gallery-button:hover {
+  transform: scale(1.05);
+}
+
+/* Galeria oculta e animada */
+.hidden {
+  display: none;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.content-gallery {
+  text-align: center;
+  animation: aparecerFofo 1.5s ease-in-out forwards;
+}
+
+@keyframes aparecerFofo {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 105, 180, 0.8);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: #ff1493;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -235,15 +464,5 @@ footer {
 
   .love-letter {
     font-size: 1.5rem;
-  }
-
-  input[type="text"] {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  button {
-    width: 100%;
-    margin-left: 0;
   }
 }
