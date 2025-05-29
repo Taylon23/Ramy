@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mini Jogo do Amor 💖</title>
+    <link rel="stylesheet" href="../css/jogo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Caixa de alerta personalizada -->
+      <div class="custom-alert" id="customAlert">
+        <div class="alert-content">
+          <p id="alertMessage">Mensagem</p>
+        </div>
+      </div>
+      <h2 id="pergunta">Você gosta de mim? 😊</h2>
+      <button onclick="responder('sim')">Sim</button>
+      <button onclick="responder('claro')">Claro!</button>
+      <p id="mensagemFinal"></p>
+    </div>
+
+    <script src="../js/jogo.js"></script>
+  </body>
+</html>

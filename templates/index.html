@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Para o Amor da Minha Vida 💜</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <div id="smile-button">😊 hihi!</div>
   <body>
@@ -46,17 +46,35 @@
         <p>Bom, já falei demais... pode começar! ✨</p>
       </div>
 
-      <div class="interactive"></div>
-
-      <!-- Caixa de alerta personalizada -->
-      <div class="custom-alert" id="customAlert">
+      <div class="interactive">
+<!-- Caixa de alerta personalizada -->
+      <div class="alert" id="alert">
         <div class="alert-content">
-          <p id="alertMessage">Mensagem</p>
-          <button onclick="fecharAlerta()">💖 Ok</button>
+            <p id="alertMessage"></p>
+        </div>
+    </div>
+
+      <div class="question-container" id="questionContainer">
+        <div id="questionContent"></div>
+      </div>
+
+       <div class="envelope-container">
+        <div class="envelope" onclick="toggleEnvelope()">
+            <div class="envelope-flap"></div>
+            <div class="envelope-front"></div>
+            <div class="envelope-paper">
+                <div class="letter-content" id="letterContent">
+                    <h2 id="letterTitle">Primeiro responda</h2>
+                    <p id="letterText"></p>
+                </div>
+            </div>
+            <div class="envelope-back"></div>
         </div>
       </div>
 
-      <div class="love-letter"></div>
+      
+    </div>
+    </div>
 
       <div class="introduction">
         <h2>Lá embaixo ficam umas coisinhas massa, mas leia isso aqui antes</h2>
@@ -89,7 +107,7 @@
       <div class="content-gallery hidden" id="galeriaFotos">
         <div class="gallery">
           <img
-            src="assets/Captura de tela 2025-05-05 121303.png"
+            src="../assets/Captura de tela 2025-05-05 121303.png"
             alt="Nossa foto 1"
           />
           <img
@@ -119,7 +137,7 @@
         <div class="slider" id="slider">
           <div class="slide">
             <img
-              src="assets/Captura de tela 2025-05-05 121303.png"
+              src="../assets/Captura de tela 2025-05-05 121303.png"
               alt="Foto 1"
             />
           </div>
@@ -146,30 +164,23 @@
         <button class="next" onclick="mudarSlide(1)">❯</button>
       </div>
     </div>
-
-    <!-- <div class="button-dwonload">
-      <a href="caminho/do/arquivo.pdf" download class="download-btn"
-        >📥 Baixar presente</a
-      >
-    </div> -->
-
     <footer>
       <div class="container">
         <p class="footer-message">
-          Se você chegou até aqui, saiba que você é alguém que quero levar para o resto da minha vida
+          Se você chegou até aqui, saiba que você é alguém que quero levar para
+          o resto da minha vida
         </p>
-        <button class="surprise-btn" onclick="mostraDown()">
-         Não clique aqui
+        <button class="surprise-btn" onclick="window.location.href='jogo.html'">
+          O que isso aqui faz?
         </button>
       </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="carrosel.js"></script>
-    <script src="button-count.js"></script>
-    <script src="gallery.js"></script>
-    <script src="slide.js"></script>
-    <script src="download.js"></script>
-
+    <script src="../js/script.js"></script>
+    <script src="../js/carrosel.js"></script>
+    <script src="../js/button-count.js"></script>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/slide.js"></script>
+    <script src="../js/download.js"></script>
   </body>
 </html>
