@@ -1,44 +1,44 @@
 const perguntas = [
   {
-    texto: "Qual é a sua estação do ano favorita?",
-    alerta: "Estação linda, como você 💮",
+    texto: "primeira pergunta é: Já banhou, sebosa? kkkk brinks... Se fosse pedir um presente legal qual seria?",
+    alerta: "hmmm",
     carta: {
-      titulo: "Carta 1 – Um começo doce",
-      texto: "Quando penso em você, tudo floresce dentro de mim 🌸.",
+      titulo: "Carta 1 – Presente",
+      texto: "O presente já sou eu, simples kkkkkk né noop. Não sei qual presente vc escoheu agora, mas quando vc enviou com certeza chegou pra mim e o eu do futuro sabe agr kkkkkkk não vou responder essa agora, provavelmente vou esta mandando mensagem agr falando desse presente, então aguardar para resposta kkkkkkkk",
     },
   },
   {
-    texto: "Você acredita em amor à primeira vista?",
-    alerta: "Acreditar no amor é mágico ✨",
+    texto: "Se eu sumisse por dois dias (só pra ver sua reação), o que você ia fazer? Não vale dizer que ia comemorar kkkkk",
+    alerta: "1 dia já é muito né kkkkkkkk",
     carta: {
-      titulo: "Carta 2 – Confissões do coração",
+      titulo: "Carta 2 – Dias",
       texto:
-        "Você faz meu coração sorrir de um jeito que eu nem sabia que era possível 💖.",
+        "Dois dias sem você? Eu ia fingir que tava de boa, mas serão eu ia abrir a conversa de 2 em 2 minutos igual um doido kkkkk. Você some assim não, que meu coração não tem plano B 💔.",
     },
   },
   {
-    texto: "Se pudesse ir a qualquer lugar agora, onde seria?",
-    alerta: "Que lugar especial! 🗺️",
+    texto: "Se seu coração tivesse playlist, qual música ia tocar quando pensa em mim? E cuidado que eu tô de ouvidos 👂kkkkkk",
+    alerta: "Rapaz",
     carta: {
-      titulo: "Carta 3 – Uma viagem com você",
-      texto: "Não importa o destino... se for contigo, já é o paraíso 💞.",
+      titulo: "Carta 3 – Playlist",
+      texto: "Não sei se sabe, mas tem algumas musicas na playlist do discord que eu coloquei pensando em vc, nem sei se já foi ver e tbm nem sei se já me mandou a playlist kkkkkkkkkkk aaa e já tentei achar musica com seu nome, não achei, com meu nome tbm não tem kkkkk",
     },
   },
   {
     texto: "Qual é sua música romântica preferida?",
-    alerta: "Essa música toca a alma 🎶",
+    alerta: "Não sei se já ouvir, mas se noop vou ver jaja",
     carta: {
-      titulo: "Carta 4 – Trilha sonora do amor",
-      texto: "Cada verso de uma canção me lembra o som da sua risada 🎵❤️.",
+      titulo: "Carta 4 – Preferida",
+      texto: "Eu tenho uma favorita, mas eu gosto de algumas que são novas pra mim, que me fazem lembrar vc... agr pra saber tem que investigar haha",
     },
   },
   {
-    texto: "Você gosta de surpresas?",
+    texto: "Você gosta de surpresas?(clr que gosta kkkkk)",
     alerta: "As melhores surpresas vêm do coração 🎁",
     carta: {
-      titulo: "Carta 5 – Uma surpresa no fim",
+      titulo: "Carta 5 – Uma surpresa",
       texto:
-        "Essa jornada foi só o começo… tem muito amor guardado pra você 💌.",
+        "Talvez isso aqui não foi uma surpresa para vc kkkkkkk, mas eu duvido se sabia que ia ganhar isso e um presente massa que dei para você, jaja vai saber o que é, espero que fique feliz com ele... mas no final de tudo espero que tenha gostado, me da um feedback depois do que achou de tudo isso kkkkkkk foi demorado mas foi feito com muitoooo carinhooo hihi",
     },
   },
 ];
