@@ -37,7 +37,7 @@ h1 {
 
 video {
   width: 90%;
-  max-width: 400px;
+  max-width: 720px;
   border: 1px solid #d63384;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -67,7 +67,7 @@ video {
 .download:hover {
   background-color: #a02263;
 }
-@media (max-width: 720px) {
+@media (max-width: 768px){
   body,
   html {
     width: 100%;
@@ -79,7 +79,5 @@ video {
     justify-content: center;
     box-sizing: border-box;
   }
-  video{
-    max-width: initial;
-  }
+
 }
