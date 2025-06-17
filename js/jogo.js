@@ -1,8 +1,8 @@
 function responder(resposta) {
   if (resposta === "claro") {
-    mostrarAlerta("hihi,e é claro que eu gosto de você,ramy! 😍");
-  } else if (resposta === "sim") {
-    mostrarAlerta('"Sim"? besta kkkkkkkkk');
+    mostrarAlerta("hihi,te mostrar agora");
+  } else if (resposta === "nao") {
+    mostrarAlerta('"Vai ver mesmo assim kkkkkkkkkkk');
   }
 
   document.getElementById("mensagemFinal").textContent =

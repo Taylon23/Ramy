@@ -2,16 +2,33 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <title>Nosso Momento 💖</title>
-    <link rel="stylesheet" href="../css/video.css">
+    <title>Ramy video</title>
+    <link rel="stylesheet" href="../css/video.css" />
   </head>
   <body>
-    <h1>Assista com carinho 💕</h1>
-    <video controls autoplay>
-      <source src="../assets/file_example_MP4_480_1_5MG.mp4" type="video/mp4" />
-      Seu navegador não suporta vídeo.
-    </video>
+    <div id="ambient-light"></div>
 
-    <button class="voltar" onclick="window.location.href='index.html'">Voltar</button>
+    <div class="content">
+      <h1>Eu que fiz hehe 💖</h1>
+
+      <video id="video" controls crossorigin="anonymous">
+        <source src="../assets/ramy_video.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+
+      <br />
+      <div class="butoes">
+        <button class="voltar" onclick="window.location.href='index.html'">
+          Voltar
+        </button>
+        <a href="../assets/ramy_video.zip" download>
+          <button class="download">Baixar Vídeo 🎬</button>
+        </a>
+      </div>
+    </div>
+
+    <canvas id="color-canvas" style="display: none"></canvas>
+
+    <script src="../js/video.js"></script>
   </body>
 </html>

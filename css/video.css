@@ -1,8 +1,10 @@
 body {
   margin: 0;
-  background: linear-gradient(120deg, #ffe6f0, #ffe0ec);
+  background-color: #212121;
   font-family: "Segoe UI", sans-serif;
   display: flex;
+  overflow: hidden;
+  transition: background-color 0.5s;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -10,20 +12,46 @@ body {
 }
 
 h1 {
-  color: #d63384;
+  color: #ec72af;
   margin-bottom: 20px;
   font-size: 2em;
 }
 
+#ambient-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(100px);
+  transition: background 0.2s linear;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 20px;
+}
+
 video {
   width: 90%;
-  max-width: 720px;
-  border: 5px solid #d63384;
+  max-width: 400px;
+  border: 1px solid #d63384;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.voltar {
+.butoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.voltar,
+.download {
   margin-top: 20px;
   background-color: #d63384;
   color: white;
@@ -35,6 +63,23 @@ video {
   transition: background 0.3s;
 }
 
-.voltar:hover {
+.voltar:hover,
+.download:hover {
   background-color: #a02263;
+}
+@media (max-width: 720px) {
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  video{
+    max-width: initial;
+  }
 }
