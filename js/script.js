@@ -119,5 +119,7 @@ function validarResposta() {
   setTimeout(showQuestion, 600); // Espera sumir para mostrar nova pergunta
 }
 
+alert("clique na tela depois de sair dessa caixa de mensagem");
+
 // Inicia
 showQuestion();
