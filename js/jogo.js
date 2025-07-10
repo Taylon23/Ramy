@@ -1,16 +1,25 @@
 function responder(resposta) {
-  if (resposta === "claro") {
-    mostrarAlerta("hihi,te mostrar agora");
-  } else if (resposta === "nao") {
-    mostrarAlerta('"Vai ver mesmo assim kkkkkkkkkkk');
+  if (resposta === "nao") {
+    // Clicou em "Não", não faz nada
+    return;
   }
 
-  document.getElementById("mensagemFinal").textContent =
-    "Prepare-se para a surpresa... 💌";
+  if (resposta === "claro") {
+    const senha = prompt("Digite a senha:");
 
-  setTimeout(() => {
-    window.location.href = "video.html"; //link personalizado
-  }, 6000);
+    if (senha === "Ραμίλλυ") {
+      mostrarAlerta("hihi, te mostrar agora");
+
+      document.getElementById("mensagemFinal").textContent =
+        "Prepare-se para a surpresa... 💌";
+
+      setTimeout(() => {
+        window.location.href = "video.html"; // link da surpresa
+      }, 6000);
+    } else {
+      mostrarAlerta("Como errou a senha???");
+    }
+  }
 }
 
 function mostrarAlerta(mensagem) {
@@ -22,5 +31,5 @@ function mostrarAlerta(mensagem) {
 
   setTimeout(() => {
     alertBox.style.display = "none";
-  }, 5000); // some após 5 segundos
+  }, 5000); // esconde após 5 segundos
 }
